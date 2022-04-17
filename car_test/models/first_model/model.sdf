@@ -1,0 +1,602 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+
+  <model name='Ummannd_Car'>
+  <static>false</static>
+
+  <link name='car'>
+
+    <inertial>
+      <mass>15</mass>
+      <inertia>
+        <ixx>0.126164</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.416519</iyy>
+        <iyz>0</iyz>
+        <izz>0.481014</izz>
+        </inertia>
+    </inertial>
+
+    <pose>0 0 0.02 0 0 0</pose>
+
+    <collision name='car_collision'>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/body.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+
+    </collision>
+
+    <visual name='car_visual'>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/body.dae</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 0.1</ambient>
+        <diffuse>0 0 0 0.3</diffuse>
+        <specular>0 0 0 0</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+  
+  <link name='back_left_wheel'>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='back_left_wheel_collision'>
+
+      <pose>-0.15 -0.15 0 0 0 1.5708</pose>
+
+      <!-- <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.STL</uri>
+          <scale>0.001 0.001 0.001</scale>>
+        </mesh>
+      </geometry> -->
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+    <surface>
+
+      <friction>
+        <ode>
+          <mu>1</mu>
+          <mu2>1</mu2>
+          <slip1>0</slip1>
+          <slip2>0</slip2>
+        </ode>
+      </friction>
+
+      <contact>
+        <ode>
+          <soft_cfm>0</soft_cfm>
+          <soft_erp>0.2</soft_erp>
+          <kp>1e+13</kp>
+          <kd>1</kd>
+          <max_vel>0.01</max_vel>
+          <min_depth>0.01</min_depth>
+        </ode>
+      </contact>
+
+    </surface>
+
+    </collision>
+
+    <visual name='back_left_visual'>
+
+      <pose>-0.15 -0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+<!--       <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry> -->
+
+      <material>
+        <ambient>0 0 0 1</ambient>
+        <diffuse>0 0 0 0.3</diffuse>
+        <specular>0 0 0 0.3</specular>
+        <emissive>0.3 0 0 0.3</emissive>
+      </material>
+
+    </visual>
+  </link>
+
+  <link name='back_right_wheel'>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='back_right_wheel_collision'>
+
+      <pose>0.15 -0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <surface>
+
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+            <slip1>0</slip1>
+            <slip2>0</slip2>
+          </ode>
+        </friction>
+
+        <contact>
+          <ode>
+            <soft_cfm>0</soft_cfm>
+            <soft_erp>0.2</soft_erp>
+            <kp>1e+13</kp>
+            <kd>1</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+
+      </surface>
+
+    </collision>
+
+    <visual name='back_right_visual'>
+
+      <pose>0.15 -0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 1</ambient>
+        <diffuse>0 0 0 0.3</diffuse>
+        <specular>0 0 0 0.3</specular>
+        <emissive>0.3 0 0 0.3</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+
+  <link name='front_left_wheel'>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='front_left_wheel_collision'>
+
+      <pose>-0.15 0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <surface>
+
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+            <slip1>0</slip1>
+            <slip2>0</slip2>
+          </ode>
+        </friction>
+        
+        <contact>
+          <ode>
+            <soft_cfm>0</soft_cfm>
+            <soft_erp>0.2</soft_erp>
+            <kp>1e+13</kp>
+            <kd>1</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+
+      </surface>
+
+    </collision>
+
+    <visual name='front_left_visual'>
+
+      <pose>-0.15 0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 1</ambient>
+        <diffuse>0 0 0 0.3</diffuse>
+        <specular>0 0 0 0.3</specular>
+        <emissive>0.3 0 0 0.3</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+
+  <link name='front_right_wheel'>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='front_right_wheel_collision'>
+
+      <pose>0.15 0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <surface>
+
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+            <slip1>0</slip1>
+            <slip2>0</slip2>
+          </ode>
+        </friction>
+        
+        <contact>
+          <ode>
+            <soft_cfm>0</soft_cfm>
+            <soft_erp>0.2</soft_erp>
+            <kp>1e+13</kp>
+            <kd>1</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+
+      </surface>
+
+    </collision>
+
+    <visual name='front_right_visual'>
+
+      <pose>0.15 0.15 0 0 0 1.5708</pose>
+
+      <geometry>
+        <mesh>
+          <uri>model://first_model/meshes/wheel.dae</uri>
+          <scale>1 1 1</scale>>
+        </mesh>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 1</ambient>
+        <diffuse>0 0 0 0.3</diffuse>
+        <specular>0 0 0 0.3</specular>
+        <emissive>0.3 0 0 0.3</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+
+  <!-- Rotate link -->
+  <link name='rotate_left_wheel'>
+
+    <pose>-0.15 0 0.05 0 1.5708 0</pose>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='rotate_left__wheel_collision'>
+
+      <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry>
+
+      <surface>
+
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+            <slip1>0</slip1>
+            <slip2>0</slip2>
+          </ode>
+        </friction>
+        
+        <contact>
+          <ode>
+            <soft_cfm>0</soft_cfm>
+            <soft_erp>0.2</soft_erp>
+            <kp>1e+13</kp>
+            <kd>1</kd>
+            <max_vel>0.05</max_vel>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+
+      </surface>
+
+    </collision>
+
+    <visual name='rotate_left_wheel_visual'>
+
+      <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 0</ambient>
+        <diffuse>0 0 0 0</diffuse>
+        <specular>0 0 0 0</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+
+  <link name='rotate_right_wheel'>
+
+    <pose>0.15 0 0.05 0 1.5708 0</pose>
+
+    <inertial>
+      <mass>1</mass>
+      <inertia>
+        <ixx>0.145833</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.145833</iyy>
+        <iyz>0</iyz>
+        <izz>0.125</izz>
+      </inertia>
+    </inertial>
+
+    <collision name='rotate_right__wheel_collision'>
+
+      <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry>
+
+      <surface>
+
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+            <slip1>0</slip1>
+            <slip2>0</slip2>
+          </ode>
+        </friction>
+        
+        <contact>
+          <ode>
+            <soft_cfm>0</soft_cfm>
+            <soft_erp>0.2</soft_erp>
+            <kp>1e+13</kp>
+            <kd>1</kd>
+            <max_vel>0.01</max_vel>
+            <min_depth>0.01</min_depth>
+          </ode>
+        </contact>
+
+      </surface>
+
+    </collision>
+
+    <visual name='rotate_right_wheel_visual'>
+
+      <geometry>
+        <cylinder>
+          <radius>0.05</radius>
+          <length>0.1</length>
+        </cylinder>
+      </geometry>
+
+      <material>
+        <ambient>0 0 0 0</ambient>
+        <diffuse>0 0 0 0</diffuse>
+        <specular>0 0 0 0</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+
+    </visual>
+
+  </link>
+
+  <joint name='back_left_wheel_joint' type='fixed'>
+
+    <parent>car</parent>
+    <child>back_left_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+  </joint>
+
+  <joint name='back_right_wheel_joint' type='fixed'>
+
+    <parent>car</parent>
+    <child>back_right_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+  </joint>
+
+  <joint name='front_left_wheel_joint' type='fixed'>
+
+    <parent>car</parent>
+    <child>front_left_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+  </joint>
+
+  <joint name='front_right_wheel_joint' type='fixed'>
+
+    <parent>car</parent>
+    <child>front_right_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+  </joint>
+
+  <joint name='rotate_left_wheel_joint' type='revolute'>
+
+    <parent>car</parent>
+    <child>rotate_left_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+
+  </joint>
+
+  <joint name='rotate_right_wheel_joint' type='revolute'>
+
+    <parent>car</parent>
+    <child>rotate_right_wheel</child>
+    <pose>0 0 0 0 0 0</pose>
+
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+
+  </joint>
+
+  <plugin name="wheel_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <!-- ROS topic -->
+    <ros>
+
+      <namespace>/demo_car</namespace>
+      <remapping>cmd_vel:=cmd_vel</remapping>
+      <remapping>odom:=odom_demo</remapping>
+
+    </ros>
+
+    <!-- Wheel pair of car -->
+    <num_wheel_pairs>1</num_wheel_pairs>
+    <left_joint>rotate_left_wheel_joint</left_joint>
+    <right_joint>rotate_right_wheel_joint</right_joint>
+
+    <!-- Wheel diameter & separation -->
+    <wheel_separation>0.3</wheel_separation>
+    <wheel_diameter>0.08</wheel_diameter>
+
+    <!-- Dynamics -->
+    <max_wheel_torque>20.0</max_wheel_torque>
+    <max_wheel_acceleration>10.0</max_wheel_acceleration>
+
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>true</publish_wheel_tf>
+
+    <update_rate>500</update_rate>
+
+    <!-- Frame -->
+    <odometry_frame>odom_demo</odometry_frame>
+    <robot_base_frame>car</robot_base_frame>
+
+  </plugin>
+
+  </model>
+</sdf>
