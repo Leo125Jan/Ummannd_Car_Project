@@ -23,8 +23,8 @@ ros2 launch care_world.launch.py
 ## Usage
 
 * Vehicle
-<a><img src="https://user-images.githubusercontent.com/98295556/193447710-9597a2ec-7d9e-443b-a3d4-129ad4f0ba4d.png" width="480" height="360" border="10" /></a>
-![image](https://user-images.githubusercontent.com/98295556/193447710-9597a2ec-7d9e-443b-a3d4-129ad4f0ba4d.png)
+<a><img src="https://user-images.githubusercontent.com/98295556/193447710-9597a2ec-7d9e-443b-a3d4-129ad4f0ba4d.png" 
+width="800" height="450" border="10" /></a>
 
 * Moving
 
