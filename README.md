@@ -37,6 +37,7 @@ alt="圖片 ALT 文字放在這裡" width="480" height="360" border="10" /></a>
 " target="_blank"><img src="http://img.youtube.com/vi/IhL14HzXzak/0.jpg" 
 alt="圖片 ALT 文字放在這裡" width="480" height="360" border="10" /></a>
 
-
+## License
+Distributed under the MIT License. 
 
 
