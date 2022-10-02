@@ -29,13 +29,13 @@ ros2 launch care_world.launch.py
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZFiw0HopYgI
 " target="_blank"><img src="http://img.youtube.com/vi/ZFiw0HopYgI/0.jpg" 
-title="Moving" width="480" height="360" border="10" /></a>
+width="480" height="360" border="10" /></a>
 
 * Room
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=IhL14HzXzak
 " target="_blank"><img src="http://img.youtube.com/vi/IhL14HzXzak/0.jpg" 
-alt="圖片 ALT 文字放在這裡" width="480" height="360" border="10" /></a>
+width="480" height="360" border="10" /></a>
 
 ## License
 Distributed under the MIT License. 
