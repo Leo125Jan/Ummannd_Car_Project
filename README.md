@@ -31,13 +31,13 @@ width="640" height="360" border="10" /></a>
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZFiw0HopYgI
 " target="_blank"><img src="http://img.youtube.com/vi/ZFiw0HopYgI/0.jpg" 
-width="480" height="360" border="10" /></a>
+width="480" height="270" border="10" /></a>
 
 * Room
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=IhL14HzXzak
 " target="_blank"><img src="http://img.youtube.com/vi/IhL14HzXzak/0.jpg" 
-width="480" height="360" border="10" /></a>
+width="480" height="270" border="10" /></a>
 
 ## License
 Distributed under the MIT License. 
